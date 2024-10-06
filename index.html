@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Magnificent Trigonometry (3D)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <h3 class="header">Magnificent Trigonometry</h3>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6" id="container"></div>
+    <div class="col-sm-6" id="side">
+      <h3>Options</h3>
+      <div class="row">
+        <div class="col-sm-12">
+          <label class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" id="ce"/><span class="custom-control-indicator"></span><span class="custom-control-description">Show circles</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-sm-4" for="n">Circles</label>
+        <input class="col-sm-8 form-control" type="number" id="n" step="1"/>
+      </div>
+      <div class="row">
+        <label class="col-sm-4" for="s">Speed</label>
+        <input class="col-sm-4 form-control" type="number" id="s" step="0.001"/>
+        <input class="col-sm-4 form-control" type="button" id="p" value="Pause"/>
+      </div>
+      <div class="row">
+        <label class="col-sm-4" for="k">Multiplier</label>
+        <input class="col-sm-8 form-control" type="number" id="k" step="0.2"/>
+      </div>
+      <div class="row">
+        <label class="col-sm-4" for="aki">Auto-adder</label>
+        <input class="col-sm-4 form-control" type="number" id="aki" step="0.001"/>
+        <div class="col-sm-4">
+          <label class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" id="ake"/><span class="custom-control-indicator"></span><span class="custom-control-description">Enable</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-sm-4">Align view</label>
+        <div class="btn-group" id="a">
+          <input class="btn" type="button" id="at" value="Top"/>
+          <input class="btn" type="button" id="af" value="Front"/>
+          <input class="btn" type="button" id="as" value="Side"/>
+          <input class="btn" type="button" id="ad" value="Default"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3>A few interesting combinations</h3>
+  <p><i>Note: it is recommended that you disable "Show circles" and set the speed to a very low value when the circle count is high.</i></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Comment</th>
+        <th>Circles</th>
+        <th>Multiplier</th>
+        <th>Speed</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="cbs"></tbody>
+  </table>
+  <h3>How does this work?</h3>
+  <h3>Notes</h3>
+  <p>Patterns seem to be proper to a multiplier. However, this seems untrue for higher multipliers, where increasing the number of circles also changes the pattern. Maybe a stable pattern emerges only after a circle.</p>
+  <h3>About  </h3>
+  <p>THIS IS A MATHEMATICAL PRACTICAL TOOL FOR MATHS STUDENTS TO UNDERSTAND THE CONCEPTS MORE EAISLY.</p>
+  <p>Powered by BRDL</p>
+  <p>Made with 💗 by BRDL (PRINCE)</a></p>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
+<script src='https://raw.githubusercontent.com/mrdoob/three.js/4ab922b78ee7106cc97e9347662e84baceb2df6a/examples/js/controls/OrbitControls.js'></script><script type="module" src="./script.js"></script>
+
+</body>
+</html>
